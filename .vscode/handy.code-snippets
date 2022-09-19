@@ -1,0 +1,61 @@
+{
+  "Documentation": {
+    "prefix": "pa-doc",
+    "body": [
+      "$BLOCK_COMMENT_START",
+      "ᯣ Params ᮡ",
+      "Descriptionꪵ $1",
+      "Inputꪵ $2",
+      "Outputꪵ $3",
+      "$BLOCK_COMMENT_END",
+    ]
+  },
+  "React Map Loop": {
+    "prefix": "pa-react-map",
+    "body": ["{${1:array}.map((${2:item}) => <div key={${3:key}></div>)}"],
+    "description": "React snipped to add map over array."
+  },
+  "React Provider": {
+    "prefix": "pa-react-provider",
+    "body": [
+      "import { ReactNode } from 'react'",
+      "import { createContext, useContext } from 'react'",
+      "",
+      "export type ${1:ProviderName}Props = {",
+      "  children?: ReactNode",
+      "}",
+      "",
+      "export type ${1:ProviderName}ReturnTypes = {",
+      "  stringProp?: string",
+      "  functionProp?: () => void",
+      "  booleanProp?: boolean",
+      "}",
+      "",
+      "const ${1:ProviderName}Context = createContext<${1:ProviderName}ReturnTypes>({",
+      "  stringProp: '',",
+      "  functionProp: () => {},",
+      "  booleanProp: false,", 
+      "})",
+      "",
+      "export function use${1:ProviderName}Provider() {",
+      "  return useContext(${1:ProviderName}Context)",
+      "}",
+      "",
+      "export function ${1:ProviderName}Provider({ children }: ${1:ProviderName}Props) {",
+      "",
+      "  return (",
+      "    <${1:ProviderName}Context.Provider",
+      "      value={{",
+      "        stringProp: '',",
+      "        functionProp: () => {},",
+      "        booleanProp: false,",
+      "      }}",
+      "    >",
+      "      {children}",
+      "    </${1:ProviderName}Context.Provider>",
+      "  )",
+      "}"
+    ],
+    "description": "Template for a react ts provider config."
+  }
+}

@@ -1,0 +1,6 @@
+:root {
+  --header-height: 100px;
+  --footer-height: 60px;
+  /* TYPOGRAPHY */
+  --code-font: 'SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace';
+}

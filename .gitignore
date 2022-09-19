@@ -1,0 +1,9 @@
+packages/**/dist/**
+node_modules
+
+examples/**/dist/**
+examples/**/.next
+examples/**/node_modules/**
+examples/**/.env.local
+
+.env.local

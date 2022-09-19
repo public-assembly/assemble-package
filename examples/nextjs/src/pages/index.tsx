@@ -1,6 +1,11 @@
+import { TestComponent } from 'react-package'
+
 function Page() {
   return (
-    <div>Hello</div>
+    <>
+      <div>Hello</div>
+      <TestComponent />
+    </>
   )
 }
 

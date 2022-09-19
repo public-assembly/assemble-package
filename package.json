@@ -11,12 +11,15 @@
     "examples/*"
   ],
   "scripts": {
-    "next": "cd examples && cd nextjs && yarn dev",
-    "build": "preconstruct build"
+    "example:next": "preconstruct dev && cd examples && cd nextjs && yarn dev",
+    "build": "preconstruct build",
+    "postinstall": "preconstruct dev"
   },
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/preset-env": "^7.19.1",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
     "@preconstruct/cli": "^2.2.1"
   },
   "preconstruct": {

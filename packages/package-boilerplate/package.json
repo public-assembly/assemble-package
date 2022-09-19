@@ -1,9 +1,0 @@
-{
-  "name": "package-boilerplate",
-  "version": "1.0.0",
-  "description": "Sample package directory",
-  "main": "dist/package-boilerplate.cjs.js",
-  "module": "dist/package-boilerplate.esm.js",
-  "author": "Public Assembly",
-  "license": "MIT"
-}

@@ -28,7 +28,8 @@ Currently there are 2 example apps you can use to view your work. Simply import 
 - Vanilla React App: Less strict of a development environment in that you will not have to be as careful around SSR issues that are present with the combination of React 18 & Next.js 12+
 
 ## Video Tutorials:
-1. Getting started: Using the template and exploring the Repo [Loom Video](https://www.loom.com/share/2c06e5556bc4416095491d5ecb595703)
+1. Getting started: Using the template and exploring the Repo: [Loom Video](https://www.loom.com/share/2c06e5556bc4416095491d5ecb595703)
+2. Exploring the repo further, running the example apps to demo the development process and how packages are consumed in development: [Loom Video](https://www.loom.com/share/1bc4f356142046088f40fd02b804eb5d)
 
 ### Further Reading:
 - [https://monorepo.guide/getting-started](Monorepo Guide: Getting Started)

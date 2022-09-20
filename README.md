@@ -40,9 +40,9 @@ Currently there are 2 example apps you can use to view your work. Simply import 
 - A Next Js app. Note that this is the most recent version of react and nextjs which introduces more stringent methodolgies around server and client side rendering. This is a good test environment to illustrate optimal package usage especially when content is not hydrated.
 - Vanilla React App: Less strict of a development environment in that you will not have to be as careful around SSR issues that are present with the combination of React 18 & Next.js 12+
 
-## Video Tutorials:
-1. Getting started: Using the template and exploring the Repo: [Loom Video](https://www.loom.com/share/2c06e5556bc4416095491d5ecb595703)
-2. Exploring the repo further, running the example apps to demo the development process and how packages are consumed in development: [Loom Video](https://www.loom.com/share/1bc4f356142046088f40fd02b804eb5d)
+## TUTORIAL
+1. Getting started: Using the template and exploring the Repo: [https://www.loom.com/share/2c06e5556bc4416095491d5ecb595703](https://www.loom.com/share/2c06e5556bc4416095491d5ecb595703)
+2. Exploring the repo further, running the example apps to demo the development process and how packages are consumed in development: [https://www.loom.com/share/1bc4f356142046088f40fd02b804eb5d](https://www.loom.com/share/1bc4f356142046088f40fd02b804eb5d)
 3. Creating a new package (and removing the examples and references in sample apps to the example packages in the repo template): [https://www.loom.com/share/7a925693f28f4031a8588dd0483d7828](https://www.loom.com/share/7a925693f28f4031a8588dd0483d7828)
 4. Demonstrating importing our new package into the example apps: [https://www.loom.com/share/775d05ae0e7e4a15baf941ce6b519f95](https://www.loom.com/share/775d05ae0e7e4a15baf941ce6b519f95)
 5. Lets publish a package with changesets: [https://www.loom.com/share/c60acbc744f745abacf7aa1af0b467ab](https://www.loom.com/share/c60acbc744f745abacf7aa1af0b467ab)

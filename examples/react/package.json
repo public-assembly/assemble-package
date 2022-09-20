@@ -17,7 +17,6 @@
     "@parcel/config-default": "^2.7.0",
     "@parcel/transformer-js": "^2.7.0",
     "@parcel/transformer-react-refresh-wrap": "^2.7.0",
-    "autoprefixer": "^10.4.11",
     "parcel": "^2.7.0",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8",

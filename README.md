@@ -27,5 +27,8 @@ Currently there are 2 example apps you can use to view your work. Simply import 
 - A Next Js app. Note that this is the most recent version of react and nextjs which introduces more stringent methodolgies around server and client side rendering. This is a good test environment to illustrate optimal package usage especially when content is not hydrated.
 - Vanilla React App: Less strict of a development environment in that you will not have to be as careful around SSR issues that are present with the combination of React 18 & Next.js 12+
 
+## Video Tutorials:
+1. Getting started: Using the template and exploring the Repo [Loom Video](https://www.loom.com/share/2c06e5556bc4416095491d5ecb595703)
+
 ### Further Reading:
 - [https://monorepo.guide/getting-started](Monorepo Guide: Getting Started)

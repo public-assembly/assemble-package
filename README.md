@@ -48,5 +48,8 @@ Currently there are 2 example apps you can use to view your work. Simply import 
 5. Lets publish a package with changesets: [https://www.loom.com/share/c60acbc744f745abacf7aa1af0b467ab](https://www.loom.com/share/c60acbc744f745abacf7aa1af0b467ab)
 6. And finally lets consume the package in another project, make some changes to it and publish again - and then update in the consumer app: [https://www.loom.com/share/92ef615552c9401d81f3b5f21702afe4](https://www.loom.com/share/92ef615552c9401d81f3b5f21702afe4)
 
+### The sample repo:
+[https://github.com/dblodorn/dains-really-fly-package](https://github.com/dblodorn/dains-really-fly-package)
+
 ### Further Reading:
 - [https://monorepo.guide/getting-started](Monorepo Guide: Getting Started)

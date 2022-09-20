@@ -23,6 +23,9 @@ There are also mandatory concepts & dependencies that assist in a smooth develop
 7. If you don't want to bundle the dependency in the package make sure to use the `--peer` flag when adding to the workspace!
 8. If you ran the example apps before all this setup make sure to remove any .next / .parcel-cache and dist directories! If you don't clean up you will have problems moving forward.
 
+## Publishing:
+Note: in order to leverage the monorepo approach in a npm publishing workflow you need to have a paid NPM account - this unlocks private packages (sadly a mandatory in this context).
+
 ## Example:
 Currently there are 2 example apps you can use to view your work. Simply import your package into either or both. Both examples have been configured to support web3 technologies out of the box with the below dependencies:
 
@@ -42,6 +45,7 @@ Currently there are 2 example apps you can use to view your work. Simply import 
 2. Exploring the repo further, running the example apps to demo the development process and how packages are consumed in development: [Loom Video](https://www.loom.com/share/1bc4f356142046088f40fd02b804eb5d)
 3. Creating a new package (and removing the examples and references in sample apps to the example packages in the repo template): [https://www.loom.com/share/7a925693f28f4031a8588dd0483d7828](https://www.loom.com/share/7a925693f28f4031a8588dd0483d7828)
 4. Demonstrating importing our new package into the example apps: [https://www.loom.com/share/775d05ae0e7e4a15baf941ce6b519f95](https://www.loom.com/share/775d05ae0e7e4a15baf941ce6b519f95)
+5. Lets publish a package with changesets: [https://www.loom.com/share/c60acbc744f745abacf7aa1af0b467ab](https://www.loom.com/share/c60acbc744f745abacf7aa1af0b467ab)
 
 ### Further Reading:
 - [https://monorepo.guide/getting-started](Monorepo Guide: Getting Started)

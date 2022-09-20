@@ -6,7 +6,7 @@
   "module": "dist/react-package.esm.js",
   "author": "Public Assembly",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "files": [
     "/dist"
   ],

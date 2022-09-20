@@ -5,5 +5,6 @@
   "main": "dist/basic-package.cjs.js",
   "module": "dist/basic-package.esm.js",
   "author": "Public Assembly",
-  "license": "MIT"
+  "license": "MIT",
+  "private": false
 }

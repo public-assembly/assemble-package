@@ -1,4 +1,3 @@
-import dynamic from 'next/dynamic'
 import { TestComponent } from 'react-package'
 import { useAccount } from 'wagmi'
 import { DynamicComponent } from './../components/example/DynamicComponent'

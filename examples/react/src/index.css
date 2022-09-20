@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --header-height: 100px;
+  --footer-height: 60px;
+  /* TYPOGRAPHY */
+  --code-font: 'SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace';
+}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  height: var(--header-height);
+}
+
+main {
+  min-height: calc(100vh - var(--header-height));
+}
+
+/* UTILS */
+.raw-displayer > code,
+.raw-displayer > code > pre {
+  font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo, monospace!important;
+  line-height: 1.25;
+  font-size: 12px;
+}

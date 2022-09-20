@@ -1,16 +1,20 @@
+import './../styles/globals.css'
 import type { AppProps } from 'next/app'
 import NextHead from 'next/head'
-import * as React from 'react'
+import { AppWrapper, PageWrapper } from './../components'
 
-function App({ Component, pageProps }: AppProps) {
+function ExampleApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NextHead>
         <title>public assembly</title>
       </NextHead>
-      <Component {...pageProps} />
+      <AppWrapper>
+        <PageWrapper>
+          <Component {...pageProps} />
+        </PageWrapper>
+      </AppWrapper>
     </>
   )
 }
-
-export default App
+export default ExampleApp

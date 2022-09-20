@@ -7,8 +7,6 @@ import { useAuth } from "./../hooks/useAuth"
 
 export function Avatar() {
   const { ensName, ensAvatar } = useAuth()
-  const auth = useAuth()
-  console.log(auth)
   return (
     <div className="relative overflow-hidden w-8 h-8 rounded-full">
       {ensAvatar

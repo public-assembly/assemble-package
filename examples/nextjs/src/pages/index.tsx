@@ -1,9 +1,15 @@
+import dynamic from 'next/dynamic'
 import { TestComponent } from 'react-package'
+import { useAccount } from 'wagmi'
+import { DynamicComponent } from './../components/example/DynamicComponent'
 
 function Page() {
+  const { address } = useAccount()
+  
   return (
-    <section>
+    <section className="flex flex-col gap-4">
       <TestComponent />
+      {address ? <DynamicComponent address={address} /> : null}
     </section>
   )
 }

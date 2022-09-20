@@ -7,3 +7,4 @@ examples/**/node_modules/**
 examples/**/.env.local
 
 .env.local
+.parcel-cache

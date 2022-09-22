@@ -1,6 +1,6 @@
 import { TestComponent } from 'react-package'
 import { useAccount } from 'wagmi'
-import { DynamicComponent } from './../components/example/DynamicComponent'
+import { DynamicComponent } from '../components/example/DynamicComponent'
 
 function Page() {
   const { address } = useAccount()

@@ -1,4 +1,4 @@
-import { useAuth } from "./../hooks/useAuth"
+import { useAuth } from "../hooks/useAuth"
 
 /**
  * Type sizes, or should this be in a global theme object?

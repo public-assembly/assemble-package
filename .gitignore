@@ -1,10 +1,35 @@
 packages/**/dist/**
+
+# cache
+.pnp.cjs
+.pnp.loader.mjs
+.parcel-cache
+
+# dependencies
 node_modules
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
 
 examples/**/dist/**
 examples/**/.next
 examples/**/node_modules/**
 examples/**/.env.local
 
+# local env files (followinf dotenv-flow / nextjs convention)
 .env.local
-.parcel-cache
+.env.*.local
+
+# Misc
+.DS_Store
+*.pem
+.yarnrc.yml
+.yarn
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

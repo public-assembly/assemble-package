@@ -10,7 +10,7 @@ import {
 } from 'wagmi'
 import {
   shortenAddress
-} from './../utils/shortenAddress'
+} from '../utils/shortenAddress'
 
 export function useAuth() {
   const provider = useProvider()

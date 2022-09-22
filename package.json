@@ -1,21 +1,28 @@
 {
+  "private": true,
   "name": "assemble-package",
   "version": "1.0.0",
   "description": "NPM package boilerplate",
   "main": "index.js",
   "author": "Public Assembly",
   "license": "MIT",
-  "private": true,
   "workspaces": [
     "packages/*",
     "examples/*"
   ],
   "scripts": {
-    "example:next": "preconstruct dev && cd examples && cd nextjs && yarn dev",
-    "example:react": "preconstruct dev && cd examples && cd react && yarn dev",
-    "build": "preconstruct build",
+    "clean": "yarn clean:global-cache && yarn workspaces foreach -P run clean",
+    "clean:global-cache": "rimraf --no-glob ./.cache ./.yarn ./.parcel-cache node_modules",
+    "build:packages": "preconstruct build",
+    "build:examples": "yarn workspaces foreach -ptv --include '*-dapp' run build",
+    "build:next": "yarn workspace nextjs-dapp run build",
+    "build:react": "yarn workspace reactjs-dapp run build",
+    "example": "preconstruct dev && yarn workspaces foreach -ptv --include '*-dapp' run dev",
+    "example:next": "preconstruct dev && yarn workspace nextjs-dapp run dev",
+    "example:react": "preconstruct dev && yarn workspace reactjs-dapp run dev",
     "postinstall": "preconstruct dev",
-    "publish": "yarn preconstruct build && yarn changeset publish"
+    "release": "preconstruct build && changeset && changeset publish",
+    "init:workspaces": "yarn plugin import workspace-tools"
   },
   "devDependencies": {
     "@babel/core": "^7.19.1",
@@ -24,7 +31,9 @@
     "@babel/preset-typescript": "^7.18.6",
     "@changesets/cli": "^2.24.4",
     "@preconstruct/cli": "^2.2.1",
-    "process": "^0.11.10"
+    "buffer": "^6.0.3",
+    "process": "^0.11.10",
+    "rimraf": "^3.0.2"
   },
   "preconstruct": {
     "packages": [

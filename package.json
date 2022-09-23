@@ -58,8 +58,12 @@
       "eslint --fix",
       "prettier --write"
     ],
-    "*.json": "prettier --write",
-    "**/*.{ts,tsx}": "tsc-files --noEmit"
+    "*.json": [
+      "prettier --write"
+    ],
+    "**/*.{ts,tsx}": [
+      "tsc-files --noEmit"
+    ]
   },
   "engines": {
     "node": "^14.13.1 || >=16.0.0",

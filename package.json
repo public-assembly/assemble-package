@@ -51,7 +51,7 @@
   "lint-staged": {
     "apps/**/*.{js,ts,jsx,tsx}": [
       "eslint --fix",
-      "prettier --write ."
+      "prettier --write"
     ],
     "packages/**/*.{js,ts,jsx,tsx}": [
       "eslint --fix",

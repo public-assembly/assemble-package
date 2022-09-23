@@ -41,7 +41,8 @@
     "lint-staged": "^13.0.3",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "process": "^0.11.10",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "tsc-files": "^1.1.3"
   },
   "preconstruct": {
     "packages": [
@@ -57,9 +58,8 @@
       "eslint --fix",
       "prettier --write ."
     ],
-    "*.json": [
-      "prettier --write"
-    ]
+    "*.json": "prettier --write",
+    "**/*.ts": "tsc-files --noEmit"
   },
   "engines": {
     "node": "^14.13.1 || >=16.0.0",

@@ -52,12 +52,11 @@
   "lint-staged": {
     "apps/**/*.{js,ts,jsx,tsx}": [
       "eslint --fix",
-      "prettier --write",
-      "tsc-files --noEmit"
+      "prettier --write"
     ],
     "packages/**/*.{js,ts,jsx,tsx}": [
       "eslint --fix",
-      "prettier --write ."
+      "prettier --write"
     ],
     "*.json": "prettier --write",
     "**/*.{ts,tsx}": "tsc-files --noEmit"

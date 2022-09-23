@@ -1,12 +1,5 @@
-import {
-  WebThreeComponent
-} from './components'
+import { WebThreeComponent } from './components'
 
-import {
-  useOwnedTokens
-} from './hooks'
+import { useOwnedTokens } from './hooks'
 
-export {
-  WebThreeComponent,
-  useOwnedTokens
-}
+export { WebThreeComponent, useOwnedTokens }

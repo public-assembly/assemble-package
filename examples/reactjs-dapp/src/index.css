@@ -9,7 +9,6 @@
   --code-font: 'SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace';
 }
 
-
 html,
 body {
   padding: 0;
@@ -38,7 +37,7 @@ main {
 /* UTILS */
 .raw-displayer > code,
 .raw-displayer > code > pre {
-  font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo, monospace!important;
+  font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo, monospace !important;
   line-height: 1.25;
   font-size: 12px;
 }

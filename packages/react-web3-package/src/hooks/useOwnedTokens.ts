@@ -2,7 +2,7 @@ import { ZDK } from '@zoralabs/zdk'
 import { useState, useEffect } from 'react'
 
 const zdk = new ZDK({
-  endpoint: 'https://api.zora.co/graphql'
+  endpoint: 'https://api.zora.co/graphql',
 })
 
 export type OwnedTokensProps = {
@@ -14,12 +14,12 @@ export type OwnedTokensProps = {
 
 export function useOwnedTokens({ address }: OwnedTokensProps) {
   const [tokens, setTokens] = useState<any>()
-  
-  const zdkArgs = { 
+
+  const zdkArgs = {
     where: {
-      ownerAddresses: [address] 
-    }
-  };
+      ownerAddresses: [address],
+    },
+  }
 
   useEffect(() => {
     const fetcher = async function () {

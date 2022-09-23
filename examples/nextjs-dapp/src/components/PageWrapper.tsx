@@ -1,6 +1,6 @@
 import { Header } from './Header'
 
-export function PageWrapper({ children, ...props }: {children?: JSX.Element}) {
+export function PageWrapper({ children, ...props }: { children?: JSX.Element }) {
   return (
     <>
       <Header />

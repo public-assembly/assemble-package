@@ -7,7 +7,7 @@
       "Descriptionꪵ $1",
       "Inputꪵ $2",
       "Outputꪵ $3",
-      "$BLOCK_COMMENT_END",
+      "$BLOCK_COMMENT_END"
     ]
   },
   "React Map Loop": {
@@ -34,7 +34,7 @@
       "const ${1:ProviderName}Context = createContext<${1:ProviderName}ReturnTypes>({",
       "  stringProp: '',",
       "  functionProp: () => {},",
-      "  booleanProp: false,", 
+      "  booleanProp: false,",
       "})",
       "",
       "export function use${1:ProviderName}Provider() {",

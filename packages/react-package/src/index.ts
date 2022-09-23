@@ -1,3 +1,1 @@
-export {
-  TestComponent
-} from './components'
+export { TestComponent } from './components'

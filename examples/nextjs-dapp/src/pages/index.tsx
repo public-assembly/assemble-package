@@ -4,7 +4,7 @@ import { DynamicComponent } from '../components/example/DynamicComponent'
 
 function Page() {
   const { address } = useAccount()
-  
+
   return (
     <section className="flex flex-col gap-4">
       <TestComponent />

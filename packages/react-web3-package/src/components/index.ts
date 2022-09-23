@@ -1,3 +1,1 @@
-export { 
-  WebThreeComponent
-} from './WebThreeComponent'
+export { WebThreeComponent } from './WebThreeComponent'

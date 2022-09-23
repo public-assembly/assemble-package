@@ -1,4 +1,4 @@
-import '@rainbow-me/rainbowkit/styles.css';
+import '@rainbow-me/rainbowkit/styles.css'
 import { getDefaultWallets, RainbowKitProvider, lightTheme } from '@rainbow-me/rainbowkit'
 import { createClient, chain, configureChains, WagmiConfig } from 'wagmi'
 import { publicProvider } from 'wagmi/providers/public'
@@ -6,7 +6,10 @@ import { SWRConfig } from 'swr'
 import { NFTFetchConfiguration } from '@zoralabs/nft-hooks'
 import { ZDKFetchStrategy } from '@zoralabs/nft-hooks/dist/strategies'
 
-const { chains, provider } = configureChains([chain.mainnet, chain.goerli], [publicProvider()])
+const { chains, provider } = configureChains(
+  [chain.mainnet, chain.goerli],
+  [publicProvider()]
+)
 const { connectors } = getDefaultWallets({
   appName: 'ExampleNextjsDapp',
   chains,
@@ -33,7 +36,8 @@ export function AppWrapper({ children }: { children: JSX.Element }) {
         <NFTFetchConfiguration networkId="1" strategy={strategy}>
           <SWRConfig
             value={{
-              fetcher: (resource, init) => fetch(resource, init).then((res) => res.json()),
+              fetcher: (resource, init) =>
+                fetch(resource, init).then((res) => res.json()),
             }}>
             {children}
           </SWRConfig>

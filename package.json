@@ -52,7 +52,8 @@
   "lint-staged": {
     "apps/**/*.{js,ts,jsx,tsx}": [
       "eslint --fix",
-      "prettier --write"
+      "prettier --write",
+      "tsc-files --noEmit"
     ],
     "packages/**/*.{js,ts,jsx,tsx}": [
       "eslint --fix",

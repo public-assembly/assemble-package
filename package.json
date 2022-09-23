@@ -12,9 +12,9 @@
   ],
   "scripts": {
     "build:packages": "preconstruct build",
-    "build:examples": "yarn workspaces foreach -ptv --include '*-dapp' run build",
     "build:next": "yarn workspace nextjs-dapp run build",
-    "clean": "rimraf --no-glob ./.cache ./.yarn ./.parcel-cache node_modules",
+    "clean": "yarn clean:next && yarn clean:next && yarn clean:root",
+    "clean:root": "rimraf --no-glob ./.cache ./.yarn ./.parcel-cache node_modules",
     "clean:next": "yarn workspace nextjs-dapp run clean",
     "clean:react": "yarn workspace reactjs-dapp run clean",
     "build:react": "yarn workspace reactjs-dapp run build",

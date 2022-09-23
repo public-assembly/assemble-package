@@ -6,7 +6,7 @@ import { SWRConfig } from 'swr'
 import { NFTFetchConfiguration } from '@zoralabs/nft-hooks'
 import { ZDKFetchStrategy } from '@zoralabs/nft-hooks/dist/strategies'
 
-const { chains, provider } = configureChains([chain.mainnet], [publicProvider()])
+const { chains, provider } = configureChains([chain.mainnet, chain.goerli], [publicProvider()])
 const { connectors } = getDefaultWallets({
   appName: 'ExampleNextjsDapp',
   chains,

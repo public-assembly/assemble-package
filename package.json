@@ -21,6 +21,7 @@
     "example:next": "preconstruct dev && yarn workspace nextjs-dapp run dev",
     "example:react": "preconstruct dev && yarn workspace reactjs-dapp run dev",
     "postinstall": "preconstruct dev",
+    "prepare": "husky install",
     "release": "preconstruct build && changeset && changeset publish"
   },
   "devDependencies": {
@@ -31,12 +32,27 @@
     "@changesets/cli": "^2.24.4",
     "@preconstruct/cli": "^2.2.1",
     "buffer": "^6.0.3",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "process": "^0.11.10",
     "rimraf": "^3.0.2"
   },
   "preconstruct": {
     "packages": [
       "packages/*"
+    ]
+  },
+  "lint-staged": {
+    "apps/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix",
+      "prettier --write ."
+    ],
+    "packages/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.json": [
+      "prettier --write"
     ]
   },
   "engines": {

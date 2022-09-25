@@ -1,4 +1,4 @@
-import { utils } from "ethers"
+import { utils } from 'ethers'
 
 export function shortenAddress(address?: string, chars = 4): string {
   if (!address) {
@@ -6,7 +6,7 @@ export function shortenAddress(address?: string, chars = 4): string {
   }
 
   const parsed = utils.getAddress(address)
-  
+
   if (!parsed) {
     console.error(`Invalid 'address' parameter '${address}'.`)
     return ''

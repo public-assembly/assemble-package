@@ -7,13 +7,11 @@ export type WebThreeComponentProps = {
   text?: string
 }
 
-export function WebThreeComponent({text}: WebThreeComponentProps) {
-  const {
-    address
-  } = useAccount()
-  
+export function WebThreeComponent({ text }: WebThreeComponentProps) {
+  const { address } = useAccount()
+
   return (
-    <div className="flex flex-col border border-solid border-gray-200 p-4 rounded-xl gap-1">
+    <div className="flex flex-col gap-1 rounded-xl border border-solid border-gray-200 p-4">
       {text && <span>{text}</span>}
       <span>{address ? address : 'connect your wallet'}</span>
     </div>

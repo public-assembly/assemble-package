@@ -1,0 +1,10 @@
+node_modules
+.next
+.idea
+
+examples/**/dist/**
+examples/**/.next
+examples/**/node_modules/**
+examples/**/.env.local
+
+packages/**/dist/**

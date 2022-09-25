@@ -1,7 +1,9 @@
 # Vanilla React Dapp Example
+
 Sandbox / example environment to develop your package against, configured with [parcel.js](https://parceljs.org/)
 
 ## What's included:
+
 - ethers, peed dep for the below web3 packages
 - wagmi for web3 integration
 - rainbowkit to handle wallet connection

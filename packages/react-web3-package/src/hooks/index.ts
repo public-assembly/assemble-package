@@ -1,3 +1,1 @@
-export {
-  useOwnedTokens
-} from './useOwnedTokens'
+export { useOwnedTokens } from './useOwnedTokens'

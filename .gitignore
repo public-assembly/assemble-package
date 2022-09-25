@@ -33,3 +33,13 @@ examples/**/.env.local
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+packages/**/npm-debug.log*
+packages/**/yarn-debug.log*
+packages/**/yarn-error.log*
+
+examples/**/npm-debug.log*
+examples/**/yarn-debug.log*
+examples/**/yarn-error.log*
+
+*.tsbuildinfo

@@ -6,6 +6,7 @@ import { SWRConfig } from 'swr'
 import { NFTFetchConfiguration } from '@zoralabs/nft-hooks'
 import { ZDKFetchStrategy } from '@zoralabs/nft-hooks/dist/strategies'
 import { Header } from './components/Header'
+import { ReactNode } from 'react'
 
 const { chains, provider } = configureChains(
   [chain.mainnet, chain.goerli],
@@ -24,7 +25,7 @@ const wagmiClient = createClient({
 
 export const strategy = new ZDKFetchStrategy('1', 'https://api.zora.co/graphql')
 
-export function App({ children }: { children: JSX.Element }) {
+export function App({ children }: { children: ReactNode | ReactNode[] }) {
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider

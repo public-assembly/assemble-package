@@ -64,4 +64,4 @@ Currently there are 2 example apps you can use to view your work. Simply import 
 
 ### Further Reading:
 
-- [https://monorepo.guide/getting-started](Monorepo Guide: Getting Started)
+- (Monorepo Guide: Getting Started)[https://monorepo.guide/getting-started]

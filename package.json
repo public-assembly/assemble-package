@@ -11,19 +11,17 @@
     "examples/*"
   ],
   "scripts": {
-    "build:packages": "preconstruct build",
-    "build:next": "yarn workspace nextjs-dapp run build",
-    "clean": "yarn clean:next && yarn clean:next && yarn clean:root",
-    "clean:root": "rimraf --no-glob ./.cache ./.yarn ./.parcel-cache node_modules",
-    "clean:next": "yarn workspace nextjs-dapp run clean",
-    "clean:react": "yarn workspace reactjs-dapp run clean",
-    "build:react": "yarn workspace reactjs-dapp run build",
-    "example:next": "preconstruct dev && yarn workspace nextjs-dapp run dev",
-    "example:react": "preconstruct dev && yarn workspace reactjs-dapp run dev",
+    "preinstall": "npx only-allow pnpm",
+    "build": "turbo run build",
+    "build:package": "preconstruct build",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "dev": "preconstruct dev && turbo run dev",
+    "lint": "turbo run lint",
     "postinstall": "preconstruct dev",
     "prepare": "husky install",
-    "pretty": "prettier --write .",
-    "release": "preconstruct build && changeset && changeset publish"
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "version-packages": "changeset version",
+    "release": "preconstruct build && changeset version && changeset publish"
   },
   "devDependencies": {
     "@babel/core": "^7.19.1",

@@ -1,9 +1,0 @@
-{
-  "name": "basic-package",
-  "version": "1.0.0",
-  "description": "Sample package directory",
-  "main": "dist/basic-package.cjs.js",
-  "module": "dist/basic-package.esm.js",
-  "author": "Public Assembly",
-  "license": "MIT"
-}

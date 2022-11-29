@@ -7,17 +7,15 @@ packages/**/dist/**
 
 # dependencies
 node_modules
-.yarn/*
-!.yarn/patches
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
 
-examples/**/dist/**
-examples/**/.next
-examples/**/node_modules/**
-examples/**/.env.local
+.next/**
+dist/**
+build/**
+
+apps/**/dist/**
+apps/**/.next
+apps/**/node_modules/**
+apps/**/.env.local
 
 # local env files (followinf dotenv-flow / nextjs convention)
 .env.local
@@ -26,8 +24,7 @@ examples/**/.env.local
 # Misc
 .DS_Store
 *.pem
-.yarnrc.yml
-.yarn
+.turbo
 
 # Debug
 npm-debug.log*
@@ -38,8 +35,6 @@ packages/**/npm-debug.log*
 packages/**/yarn-debug.log*
 packages/**/yarn-error.log*
 
-examples/**/npm-debug.log*
-examples/**/yarn-debug.log*
-examples/**/yarn-error.log*
+packages/**/npm-debug.log*
 
 *.tsbuildinfo

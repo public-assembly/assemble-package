@@ -12,6 +12,7 @@
     "clean": "rimraf --no-glob .next node_modules"
   },
   "dependencies": {
+    "react-web3-package": "workspace:*",
     "@rainbow-me/rainbowkit": "^0.6.0",
     "@zoralabs/nft-hooks": "^1.1.9",
     "@zoralabs/zdk": "^2.1.8",

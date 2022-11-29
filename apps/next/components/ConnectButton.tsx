@@ -1,7 +1,7 @@
 import { ConnectButton as RKConnectButton } from '@rainbow-me/rainbowkit'
 import { Avatar } from './Avatar'
 
-export function ConnectButton({ ...props }) {
+export default function ConnectButton({ ...props }) {
   return (
     <div
       className="connect-button-wrapper relative flex items-center overflow-hidden rounded-2xl bg-slate-100 py-1.5 pr-3 pl-3"

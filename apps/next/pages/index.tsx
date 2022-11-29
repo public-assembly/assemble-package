@@ -1,20 +1,14 @@
 import { useAccount } from 'wagmi'
-import dynamic from 'next/dynamic'
-import Example from './../../../README.md'
+import Docs from './../../../README.md'
 
-const DynamicComponent = dynamic(() => import('../components/example/DynamicComponent'), {
-  ssr: false,
-})
-
-function Page() {
+function Home() {
   const { address } = useAccount()
 
   return (
     <section className="flex flex-col gap-4">
-      <Example />
-      {address ? <DynamicComponent address={address} /> : null}
+      <Docs />
     </section>
   )
 }
 
-export default Page
+export default Home

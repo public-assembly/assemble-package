@@ -46,10 +46,11 @@ importers:
       turbo: 1.6.3
       typescript: 4.9.3
 
-  apps/nextjs-dapp:
+  apps/next:
     specifiers:
       '@mdx-js/loader': ^2.1.3
       '@rainbow-me/rainbowkit': ^0.6.0
+      '@types/mdx': ^2.0.3
       '@types/node': ^18.7.18
       '@types/react': ^18.0.20
       '@types/react-dom': ^18.0.6
@@ -83,6 +84,7 @@ importers:
       wagmi: 0.6.8_n2cgurg25g7cgftjzlbstkeb2y
     devDependencies:
       '@mdx-js/loader': 2.1.5
+      '@types/mdx': 2.0.3
       '@types/node': 18.11.9
       '@types/react': 18.0.25
       '@types/react-dom': 18.0.9

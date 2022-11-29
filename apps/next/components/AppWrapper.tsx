@@ -5,6 +5,7 @@ import { publicProvider } from 'wagmi/providers/public'
 import { SWRConfig } from 'swr'
 import { NFTFetchConfiguration } from '@zoralabs/nft-hooks'
 import { ZDKFetchStrategy } from '@zoralabs/nft-hooks/dist/strategies'
+import { Header } from './Header'
 
 const { chains, provider } = configureChains(
   [chain.mainnet, chain.goerli],
@@ -39,7 +40,8 @@ export function AppWrapper({ children }: { children: JSX.Element }) {
               fetcher: (resource, init) =>
                 fetch(resource, init).then((res) => res.json()),
             }}>
-            {children}
+            <Header />
+            <main>{children}</main>
           </SWRConfig>
         </NFTFetchConfiguration>
       </RainbowKitProvider>

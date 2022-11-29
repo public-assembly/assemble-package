@@ -1,11 +1,8 @@
-import { useAccount } from 'wagmi'
 import Docs from './../../../README.md'
 
 function Home() {
-  const { address } = useAccount()
-
   return (
-    <section className="flex flex-col gap-4">
+    <section className="markdown-wrapper flex flex-col gap-4 max-w-[900px]">
       <Docs />
     </section>
   )

@@ -18,13 +18,13 @@ export function Navigation() {
   return (
     <div className="flex flex-row gap-4">
       {pages.map((page) => (
-        <Link passHref href={page.slug} key={page.slug}>
-          <a
-            style={{
-              color: router.asPath === page.slug ? 'red' : 'black',
-            }}>
-            {page.title}
-          </a>
+        <Link
+          href={page.slug}
+          key={page.slug}
+          style={{
+            color: router.asPath === page.slug ? 'red' : 'black',
+          }}>
+          {page.title}
         </Link>
       ))}
     </div>

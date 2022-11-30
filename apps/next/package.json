@@ -12,17 +12,17 @@
     "clean": "rimraf --no-glob .next node_modules"
   },
   "dependencies": {
-    "@rainbow-me/rainbowkit": "^0.6.0",
+    "@rainbow-me/rainbowkit": "0.8.0",
     "@zoralabs/nft-hooks": "^1.1.9",
     "@zoralabs/zdk": "^2.1.8",
     "ethers": "^5.7.1",
     "graphql-request": "^5.0.0",
-    "next": "^12.3.0",
+    "next": "^13.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-web3-package": "workspace:*",
     "swr": "^1.3.0",
-    "wagmi": "^0.6.6"
+    "wagmi": "0.8.8"
   },
   "devDependencies": {
     "@mdx-js/loader": "^2.1.3",

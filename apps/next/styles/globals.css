@@ -32,14 +32,16 @@ main {
 /* UTILS */
 .raw-displayer > code,
 .raw-displayer > code > pre,
-.markdown-wrapper code {
+.markdown-wrapper > code {
   font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo, monospace !important;
   line-height: 1.25;
   font-size: 12px;
 }
 
-.markdown-wrapper code {
-  @apply rounded-[5px] bg-gray-100 px-[10px] py-[3px] text-left;
+.markdown-wrapper p > code,
+.markdown-wrapper li > code,
+.markdown-wrapper pre {
+  @apply rounded-[5px] bg-gray-100 px-[7px] py-[3px] text-left text-sm;
 }
 
 .markdown-wrapper h1 {

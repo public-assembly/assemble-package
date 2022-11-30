@@ -2,9 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    externalDir: true,
-  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(md|mdx)?$/,

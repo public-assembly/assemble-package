@@ -7,11 +7,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 a {
-  color: inherit;
+  color: #ff89de;
   text-decoration: none;
 }
 
@@ -77,4 +77,8 @@ main {
 
 .markdown-wrapper a {
   text-decoration: underline;
+}
+
+.connect-button-wrapper:hover {
+  background-color: #ff89de;
 }

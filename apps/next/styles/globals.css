@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './theme.css';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+  color: #ff89de;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  height: var(--header-height);
+}
+
+main {
+  min-height: calc(100vh - var(--header-height));
+  padding-bottom: var(--header-height);
+  @apply px-4 pt-4;
+}
+
+/* UTILS */
+.raw-displayer > code,
+.raw-displayer > code > pre,
+.markdown-wrapper > code {
+  font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo, monospace !important;
+  line-height: 1.25;
+  font-size: 12px;
+}
+
+.markdown-wrapper p > code,
+.markdown-wrapper li > code,
+.markdown-wrapper pre {
+  @apply rounded-[5px] bg-gray-100 px-[7px] py-[3px] text-left text-sm;
+}
+
+.markdown-wrapper h1 {
+  @apply text-2xl;
+}
+
+.markdown-wrapper h2 {
+  @apply text-xl;
+}
+
+.markdown-wrapper h3, h4, h5, h6 {
+  @apply text-lg;
+}
+
+.markdown-wrapper p {
+  @apply text-base;
+}
+
+.markdown-wrapper ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.markdown-wrapper ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.markdown-wrapper li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.markdown-wrapper a {
+  text-decoration: underline;
+}
+
+.connect-button-wrapper:hover {
+  background-color: #ff89de;
+}

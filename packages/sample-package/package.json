@@ -1,11 +1,15 @@
 {
-  "name": "react-web3-package",
-  "version": "1.0.0",
+  "name": "sample-package",
+  "version": "0.0.0",
   "description": "Example package with some web3 peer dependencies\"",
-  "main": "dist/react-web3-package.cjs.js",
-  "module": "dist/react-web3-package.esm.js",
+  "main": "dist/sample-package.cjs.js",
+  "module": "dist/sample-package.esm.js",
   "author": "Public Assembly",
   "license": "MIT",
+  "private": false,
+  "files": [
+    "dist/**"
+  ],
   "peerDependencies": {
     "@zoralabs/nft-hooks": "^1.1.9",
     "@zoralabs/zdk": "^2.1.8",
@@ -16,6 +20,8 @@
     "wagmi": "^0.6.6"
   },
   "devDependencies": {
+    "@types/react": "^18.0.20",
+    "@types/react-dom": "^18.0.6",
     "@zoralabs/nft-hooks": "^1.1.9",
     "@zoralabs/zdk": "^2.1.8",
     "ethers": "^5.7.1",

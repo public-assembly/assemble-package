@@ -6,10 +6,6 @@
   "main": "index.js",
   "author": "Public Assembly",
   "license": "MIT",
-  "workspaces": [
-    "packages/*",
-    "examples/*"
-  ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "turbo run build",

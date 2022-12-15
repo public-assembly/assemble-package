@@ -1,3 +1,5 @@
+![Public Assembly - Assemble Package](https://db13.mypinata.cloud/ipfs/QmdDpJqJ4U5NkKojFtWGXxGvthW3R11MwKaViy4ywDh9wz)
+
 # Assemble Package:
 
 A lightweight monorepo template intended for use in developing javascript packages. Assemble Package leverages: 

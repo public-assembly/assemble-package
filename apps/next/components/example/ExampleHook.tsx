@@ -1,7 +1,10 @@
 import { useOwnedTokens } from 'sample-package'
-import { RawDisplayer } from '../RawDisplayer'
 
 export default function ExampleHook({ address }: { address: string }) {
   const { tokens } = useOwnedTokens({ address: address })
-  return <RawDisplayer data={{ address, tokens }} />
+  return (
+    <pre className="py-[10px] overflow-x-scroll">
+      <code>{JSON.stringify({ address, tokens }, null, 2)}</code>
+    </pre>
+  )
 }

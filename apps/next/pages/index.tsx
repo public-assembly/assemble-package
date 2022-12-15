@@ -1,8 +1,10 @@
 import Docs from './../../../README.md'
+import { Seo } from '@/components/Seo'
 
 function Home() {
   return (
-    <section className="markdown-wrapper flex flex-col gap-4 max-w-[900px] m-auto">
+    <section id="index">
+      <Seo />
       <Docs />
     </section>
   )

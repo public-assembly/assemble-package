@@ -95,3 +95,11 @@ section {
 #index img {
   @apply border-[1px] mb-8;
 }
+
+footer {
+  font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 10vmin;
+  color: #ffffff;
+}

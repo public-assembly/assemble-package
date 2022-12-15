@@ -8,6 +8,7 @@ import { SWRConfig } from 'swr'
 import { NFTFetchConfiguration } from '@zoralabs/nft-hooks'
 import { ZDKFetchStrategy } from '@zoralabs/nft-hooks/dist/strategies'
 import { Header } from './Header'
+import { Footer } from './Footer'
 
 const { chains, provider } = configureChains(
   [chain.mainnet, chain.goerli],
@@ -53,7 +54,7 @@ export function AppWrapper({ children }: { children: JSX.Element }) {
                 fetch(resource, init).then((res) => res.json()),
             }}>
             <NextNProgress
-              color="rgba(0,0,0,.5)"
+              color="#ff89de"
               startPosition={0.125}
               stopDelayMs={200}
               height={2}
@@ -62,6 +63,7 @@ export function AppWrapper({ children }: { children: JSX.Element }) {
             />
             <Header />
             <main>{children}</main>
+            <Footer />
           </SWRConfig>
         </NFTFetchConfiguration>
       </RainbowKitProvider>

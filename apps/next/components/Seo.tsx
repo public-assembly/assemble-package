@@ -3,7 +3,7 @@ import NextHead from 'next/head'
 const defaultTitle = process.env.NEXT_PUBLIC_SITE_TITLE || ''
 const defaultDescription = process.env.NEXT_PUBLIC_SITE_DESCRIPTION || ''
 const defaultOGURL = process.env.NEXT_PUBLIC_WEBSITE_URL || ''
-const defaultOGImage = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/social-card.png`
+const defaultOGImage = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/assemble-package.png`
 const favicon = '/favicon.png'
 
 type SeoProps = {

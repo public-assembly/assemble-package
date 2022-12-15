@@ -3,11 +3,16 @@
 @tailwind utilities;
 @import './theme.css';
 
+html {
+  background-color: black;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: 'Courier New', Courier, monospace;
+  color: #ffffff;
 }
 
 a {
@@ -41,7 +46,7 @@ main {
 .markdown-wrapper p > code,
 .markdown-wrapper li > code,
 .markdown-wrapper pre {
-  @apply rounded-[5px] bg-gray-100 px-[7px] py-[3px] text-left text-sm;
+  @apply rounded-[5px] bg-gray-900 px-[7px] py-[3px] text-left text-sm;
 }
 
 .markdown-wrapper h1 {
@@ -81,4 +86,12 @@ main {
 
 .connect-button-wrapper:hover {
   background-color: #ff89de;
+}
+
+section {
+  @apply markdown-wrapper flex flex-col gap-4 max-w-[900px] m-auto;
+}
+
+#index img {
+  @apply border-[1px] mb-8;
 }

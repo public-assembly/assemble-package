@@ -21,7 +21,7 @@ export function Navigation() {
         <Link passHref href={page.slug} key={page.slug}>
           <a
             style={{
-              color: router.asPath === page.slug ? 'red' : 'black',
+              color: router.asPath === page.slug ? '#ff89de' : '#ffffff',
             }}>
             {page.title}
           </a>

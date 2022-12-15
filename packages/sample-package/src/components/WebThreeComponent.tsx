@@ -1,14 +1,7 @@
 import * as React from 'react'
 import { useAccount } from 'wagmi'
 
-export function WebThreeComponent({
-  text,
-}: {
-  /**
-   * text: send in an optional string and it will render above the wallet address
-   */
-  text?: string
-}) {
+export function WebThreeComponent({ text }: { text?: string }) {
   const { address } = useAccount()
 
   React.useEffect(() => {

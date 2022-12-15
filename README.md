@@ -47,6 +47,13 @@ In the next app `package.json` you will need to import your development package 
   "[package-name-here]": "workspace:*"
 }
 ```
+In the next app `next.config.ts` make sure to update line 4 with the name of your package:
+
+```
+const withTM = require("next-transpile-modules")([
+  "[package-name-here]",
+]);
+```
 
 Both examples have been configured to support web3 technologies out of the box with the below dependencies:
 

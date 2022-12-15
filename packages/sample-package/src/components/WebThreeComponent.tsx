@@ -1,14 +1,12 @@
+import * as React from 'react'
 import { useAccount } from 'wagmi'
 
-export type WebThreeComponentProps = {
-  /**
-   * text: send in an optional string and it will render above the wallet address
-   */
-  text?: string
-}
-
-export function WebThreeComponent({ text }: WebThreeComponentProps) {
+export function WebThreeComponent({ text }: { text?: string }) {
   const { address } = useAccount()
+
+  React.useEffect(() => {
+    console.log(address)
+  }, [address])
 
   return (
     <div className="flex flex-col gap-1 rounded-xl border border-solid border-gray-200 p-4">

@@ -1,4 +1,4 @@
-import { useOwnedTokens } from 'react-web3-package'
+import { useOwnedTokens } from 'sample-package'
 import { RawDisplayer } from '../RawDisplayer'
 
 export default function ExampleHook({ address }: { address: string }) {

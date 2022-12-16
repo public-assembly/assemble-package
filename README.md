@@ -2,6 +2,8 @@
 
 # Assemble Package:
 
+## [Github Template](https://github.com/public-assembly/assemble-package)
+
 A lightweight monorepo template intended for use in developing javascript packages. Assemble Package leverages: 
 - [pnpm](https://pnpm.io/) for dependency management
 - [turbo](https://turbo.build/) for monorepo build and compile management

@@ -1,6 +1,7 @@
 :root {
-  --header-height: 60px;
+  --header-height: 120px;
   --footer-height: 60px;
+  --pa-pink: #ff89de;
   /* TYPOGRAPHY */
   --code-font: 'SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace';
 }

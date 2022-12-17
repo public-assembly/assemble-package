@@ -20,8 +20,9 @@ export function Navigation() {
       {pages.map((page) => (
         <Link passHref href={page.slug} key={page.slug}>
           <a
+            className="sm-font"
             style={{
-              color: router.asPath === page.slug ? '#ff89de' : '#ffffff',
+              color: router.asPath === page.slug ? '#ff89de' : '#ff89de',
             }}>
             {page.title}
           </a>

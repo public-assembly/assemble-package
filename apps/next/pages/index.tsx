@@ -5,7 +5,9 @@ function Home() {
   return (
     <section id="index">
       <Seo />
-      <Docs />
+      <article>
+        <Docs />
+      </article>
     </section>
   )
 }

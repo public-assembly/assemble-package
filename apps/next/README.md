@@ -1,4 +1,4 @@
-# NextJs Dapp Example
+# Next.js Sandbox
 
 Sandbox / example environment to develop your package against
 

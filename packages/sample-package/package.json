@@ -1,7 +1,7 @@
 {
   "name": "sample-package",
   "version": "0.0.0",
-  "description": "Example package with some web3 peer dependencies\"",
+  "description": "Example package with some web3 peer dependencies",
   "main": "dist/sample-package.cjs.js",
   "module": "dist/sample-package.esm.js",
   "types": "src/index.ts",
@@ -11,6 +11,9 @@
   "files": [
     "dist/**"
   ],
+  "scripts": {
+    "lint": "rome check ."
+  },
   "peerDependencies": {
     "@zoralabs/nft-hooks": "^1.1.9",
     "@zoralabs/zdk": "^2.1.8",

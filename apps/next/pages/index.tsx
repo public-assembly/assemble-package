@@ -4,7 +4,6 @@ function Home() {
   return (
     <section id="index">
       <Seo />
-      <p className='font-semibold'>Hello</p>
     </section>
   )
 }

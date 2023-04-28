@@ -1,2 +1,7 @@
 export * from './AppWrapper'
+export * from './Avatar'
+export * from './Footer'
+export * from './Header'
+export * from './Navigation'
 export * from './RawDisplayer'
+export * from './Seo'

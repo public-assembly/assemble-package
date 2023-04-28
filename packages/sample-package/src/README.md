@@ -1,1 +1,0 @@
-# Sample React Web3 Package

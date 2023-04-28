@@ -1,32 +1,29 @@
 {
-  "files": {
-    "ignore": [
-      "**/.next",
-      "**/node_modules",
-      "cache",
-      "coverage",
-      "dist",
-      "tsconfig.json",
-      "tsconfig.*.json",
-      "generated.ts",
-      "pnpm-lock.yaml"
-    ]
-  },
-  "$schema": "./node_modules/rome/configuration_schema.json",
-  "organizeImports": {
-    "enabled": false
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true
-    }
-  },
-  "javascript": {
-    "formatter": {
-      "quoteStyle": "single",
-      "trailingComma": "all",
-      "semicolons": "asNeeded"
-    }
-  }
+	"files": {
+		"ignore": [
+			"**/.next", "**/node_modules", "cache", "coverage", "dist",
+			"generated.ts", "pnpm-lock.yaml", "pnpm-workspace.yaml", "tsconfig.json",
+			"tsconfig.*.json", "turbo.json"
+		]
+	},
+	"$schema": "./node_modules/rome/configuration_schema.json",
+	"organizeImports": {
+		"enabled": false
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"suspicious": {
+				"noExplicitAny": "off"
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"trailingComma": "all",
+			"semicolons": "asNeeded"
+		}
+	}
 }

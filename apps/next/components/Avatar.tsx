@@ -6,17 +6,21 @@ import { useAuth } from '../hooks/useAuth'
  */
 
 export function Avatar() {
-  const { ensName, ensAvatar } = useAuth()
+	const { ensName, ensAvatar } = useAuth()
 
-  if (!ensAvatar) return null
+	if (!ensAvatar) return null
 
-  return (
-    <div className="relative h-8 w-8 overflow-hidden rounded-full">
-      {ensAvatar ? (
-        <img className="absolute inset-0 object-fill" src={ensAvatar} alt={ensName} />
-      ) : (
-        <div />
-      )}
-    </div>
-  )
+	return (
+		<div className="relative h-8 w-8 overflow-hidden rounded-full">
+			{ensAvatar ? (
+				<img
+					className="absolute inset-0 object-fill"
+					src={ensAvatar}
+					alt={ensName}
+				/>
+			) : (
+				<div />
+			)}
+		</div>
+	)
 }

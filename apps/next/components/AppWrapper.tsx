@@ -3,6 +3,7 @@ import { ConnectKitProvider } from 'connectkit'
 import { SWRConfig } from 'swr'
 import { Header } from './Header'
 import { Footer } from './Footer'
+import { Layout } from './Layout'
 import { getDefaultClient } from 'connectkit'
 import { createClient, configureChains, WagmiConfig } from 'wagmi'
 import { mainnet } from 'wagmi/chains'
@@ -33,7 +34,7 @@ const client = createClient(
 export function AppWrapper({ children }: { children: JSX.Element }) {
   return (
     <WagmiConfig client={client}>
-      <ConnectKitProvider theme="minimal">
+      <ConnectKitProvider theme="midnight">
         <SWRConfig
           value={{
             fetcher: (resource, init) =>
@@ -48,9 +49,11 @@ export function AppWrapper({ children }: { children: JSX.Element }) {
             showOnShallow={true}
             options={{ showSpinner: false }}
           />
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <Layout>
+            <Header />
+            {children}
+            <Footer />
+          </Layout>
         </SWRConfig>
       </ConnectKitProvider>
     </WagmiConfig>

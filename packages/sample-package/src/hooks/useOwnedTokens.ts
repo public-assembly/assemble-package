@@ -6,12 +6,12 @@ import useSWR from 'swr'
  */
 
 export function useOwnedTokens(ownerAddress: `0x${string}`) {
-	const { data: balanceOf, error: balanceOfError } = useSWR(
-		`https://ether.actor/0xd2E7684Cf3E2511cc3B4538bB2885Dc206583076/balanceOf/${ownerAddress}`,
-	)
+  const { data: balanceOf, error: balanceOfError } = useSWR(
+    `https://ether.actor/0xd2E7684Cf3E2511cc3B4538bB2885Dc206583076/balanceOf/${ownerAddress}`,
+  )
 
-	return {
-		balanceOf,
-		balanceOfError,
-	}
+  return {
+    balanceOf,
+    balanceOfError,
+  }
 }

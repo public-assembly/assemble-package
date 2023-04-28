@@ -4,15 +4,15 @@ import NextHead from 'next/head'
 import { AppWrapper } from '../components'
 
 function ExampleApp({ Component, pageProps }: AppProps) {
-	return (
-		<>
-			<NextHead>
-				<title>Public Assembly</title>
-			</NextHead>
-			<AppWrapper>
-				<Component {...pageProps} />
-			</AppWrapper>
-		</>
-	)
+  return (
+    <>
+      <NextHead>
+        <title>Public Assembly</title>
+      </NextHead>
+      <AppWrapper>
+        <Component {...pageProps} />
+      </AppWrapper>
+    </>
+  )
 }
 export default ExampleApp

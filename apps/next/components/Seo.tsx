@@ -23,7 +23,10 @@ export function Seo({ title, description, url, ogImage }: SeoProps) {
       <link rel="icon" type="image/png" sizes="24x24" href={favicon} />
       <meta property="og:url" content={url || defaultOGURL} />
       <meta property="og:title" content={title || ''} />
-      <meta property="og:description" content={description || defaultDescription} />
+      <meta
+        property="og:description"
+        content={description || defaultDescription}
+      />
       <meta
         name="twitter:creator"
         content={`@${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`}

@@ -13,7 +13,11 @@ export function Avatar() {
   return (
     <div className="relative h-8 w-8 overflow-hidden rounded-full">
       {ensAvatar ? (
-        <img className="absolute inset-0 object-fill" src={ensAvatar} alt={ensName} />
+        <img
+          className="absolute inset-0 object-fill"
+          src={ensAvatar}
+          alt={ensName}
+        />
       ) : (
         <div />
       )}

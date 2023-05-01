@@ -1,35 +1,17 @@
 import * as React from 'react'
-import { ZDK } from '@zoralabs/zdk'
+import useSWR from 'swr'
 
-const zdk = new ZDK({
-  endpoint: 'https://api.zora.co/graphql',
-})
+/**
+ * Supply an Ethereum address to see how many Public Assembly tokens it holds.
+ */
 
-export type OwnedTokensProps = {
-  /**
-   * address: ETH address
-   */
-  address: string
-}
-
-export function useOwnedTokens({ address }: OwnedTokensProps) {
-  const [tokens, setTokens] = React.useState<any>()
-
-  const zdkArgs = {
-    where: {
-      ownerAddresses: [address],
-    },
-  }
-
-  React.useEffect(() => {
-    const fetcher = async function () {
-      const resp = await zdk.tokens(zdkArgs)
-      if (resp) setTokens(resp?.tokens?.nodes)
-    }
-    fetcher()
-  }, [])
+export function useOwnedTokens(ownerAddress: `0x${string}`) {
+  const { data: balanceOf, error: balanceOfError } = useSWR(
+    `https://ether.actor/0xd2E7684Cf3E2511cc3B4538bB2885Dc206583076/balanceOf/${ownerAddress}`,
+  )
 
   return {
-    tokens,
+    balanceOf,
+    balanceOfError,
   }
 }

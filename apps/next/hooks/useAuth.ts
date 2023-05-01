@@ -19,11 +19,11 @@ export function useAuth() {
     address: address,
   })
   const { data: ensAvatar } = useEnsAvatar({
-    addressOrName: address,
+    address: address,
   })
   const { disconnect } = useDisconnect()
   const { chain } = useNetwork()
-  const { data: balance } = useBalance({ addressOrName: address })
+  const { data: balance } = useBalance({ address: address })
 
   return {
     provider,

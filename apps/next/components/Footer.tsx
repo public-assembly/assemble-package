@@ -9,12 +9,13 @@ export function Footer() {
           href={link.url}
           target="_blank"
           rel="noreferrer"
-          key={link.url}>
+          key={link.url}
+        >
           <span>{link.platform}</span>
         </a>
       ))}
       <div className="w-[60px] h-[60px] relative">
-        <img src="favicon.png"></img>
+        <img src="favicon.png" alt="favicon" />
       </div>
     </footer>
   )

@@ -1,11 +1,16 @@
-import { WebThreeComponent } from 'sample-package'
-import ExampleHook from './ExampleHook'
+import dynamic from 'next/dynamic'
 
-export default function DynamicComponent({ address }: { address?: string }) {
-  return (
-    <>
-      <WebThreeComponent />
-      {address && <ExampleHook address={address} />}
-    </>
-  )
+const DynamicWebThreeComponent = dynamic(
+  () => import('sample-package').then((module) => module.WebThreeComponent),
+  {
+    ssr: false,
+  },
+)
+
+export default function DynamicComponent({
+  address,
+}: {
+  address?: `0x${string}`
+}) {
+  return <>{address && <DynamicWebThreeComponent address={address} />}</>
 }

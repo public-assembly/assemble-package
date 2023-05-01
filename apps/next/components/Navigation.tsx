@@ -19,13 +19,14 @@ export function Navigation() {
     <div className="flex flex-row gap-4">
       {pages.map((page) => (
         <Link passHref href={page.slug} key={page.slug}>
-          <a
+          <p
             className="sm-font"
             style={{
               color: router.asPath === page.slug ? '#ff89de' : '#ff89de',
-            }}>
+            }}
+          >
             {page.title}
-          </a>
+          </p>
         </Link>
       ))}
     </div>

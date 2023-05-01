@@ -1,3 +1,4 @@
+import * as React from 'react'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import NextHead from 'next/head'
@@ -7,7 +8,7 @@ function ExampleApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NextHead>
-        <title>public assembly</title>
+        <title>Public Assembly</title>
       </NextHead>
       <AppWrapper>
         <Component {...pageProps} />

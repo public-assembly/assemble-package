@@ -1,72 +1,61 @@
-import '@rainbow-me/rainbowkit/styles.css'
 import NextNProgress from 'nextjs-progressbar'
-import { getDefaultWallets, RainbowKitProvider, lightTheme } from '@rainbow-me/rainbowkit'
-import { createClient, chain, configureChains, WagmiConfig } from 'wagmi'
-import { publicProvider } from 'wagmi/providers/public'
-import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
+import { ConnectKitProvider } from 'connectkit'
 import { SWRConfig } from 'swr'
-import { NFTFetchConfiguration } from '@zoralabs/nft-hooks'
-import { ZDKFetchStrategy } from '@zoralabs/nft-hooks/dist/strategies'
 import { Header } from './Header'
 import { Footer } from './Footer'
+import { Layout } from './Layout'
+import { getDefaultClient } from 'connectkit'
+import { createClient, configureChains, WagmiConfig } from 'wagmi'
+import { mainnet } from 'wagmi/chains'
+import { alchemyProvider } from 'wagmi/providers/alchemy'
+import { infuraProvider } from 'wagmi/providers/infura'
+import { publicProvider } from 'wagmi/providers/public'
 
-const { chains, provider } = configureChains(
-  [chain.mainnet, chain.goerli],
+const alchemyKey = process.env.NEXT_PUBLIC_ALCHEMY_KEY
+const infuraKey = process.env.NEXT_PUBLIC_INFURA_KEY
+
+const { provider } = configureChains(
+  [mainnet],
   [
-    jsonRpcProvider({
-      priority: 0,
-      rpc: (chain) =>
-        chain.id === 1
-          ? { http: 'https://rpc.ankr.com/eth' }
-          : { http: 'https://rpc.ankr.com/eth_goerli' },
-    }),
+    alchemyProvider({ apiKey: alchemyKey as string }),
+    infuraProvider({ apiKey: infuraKey as string }),
     publicProvider(),
-  ]
+  ],
 )
 
-const { connectors } = getDefaultWallets({
-  appName: 'Public Assembly',
-  chains,
-})
-
-const wagmiClient = createClient({
-  autoConnect: true,
-  connectors,
-  provider,
-})
-
-export const strategy = new ZDKFetchStrategy('1', 'https://api.zora.co/graphql')
+const client = createClient(
+  getDefaultClient({
+    appName: 'Sample App',
+    autoConnect: true,
+    provider,
+  }),
+)
 
 export function AppWrapper({ children }: { children: JSX.Element }) {
   return (
-    <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider
-        chains={chains}
-        coolMode
-        theme={lightTheme({
-          accentColor: 'black',
-          borderRadius: 'large',
-        })}>
-        <NFTFetchConfiguration networkId="1" strategy={strategy}>
-          <SWRConfig
-            value={{
-              fetcher: (resource, init) =>
-                fetch(resource, init).then((res) => res.json()),
-            }}>
-            <NextNProgress
-              color="#ff89de"
-              startPosition={0.125}
-              stopDelayMs={200}
-              height={2}
-              showOnShallow={true}
-              options={{ showSpinner: false }}
-            />
+    <WagmiConfig client={client}>
+      <ConnectKitProvider theme="midnight">
+        <SWRConfig
+          value={{
+            fetcher: (resource, init) =>
+              fetch(resource, init).then((res) => res.json()),
+          }}
+        >
+          <NextNProgress
+            color="#ff89de"
+            startPosition={0.125}
+            stopDelayMs={200}
+            height={2}
+            showOnShallow={true}
+            options={{ showSpinner: false }}
+          />
+          <Layout>
             <Header />
-            <main>{children}</main>
+            {children}
             <Footer />
-          </SWRConfig>
-        </NFTFetchConfiguration>
-      </RainbowKitProvider>
+          </Layout>
+        </SWRConfig>
+      </ConnectKitProvider>
     </WagmiConfig>
   )
 }

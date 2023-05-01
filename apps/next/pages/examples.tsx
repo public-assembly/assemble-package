@@ -2,9 +2,12 @@ import { useAccount } from 'wagmi'
 import dynamic from 'next/dynamic'
 import { Seo } from '@/components/Seo'
 
-const DynamicComponent = dynamic(() => import('../components/example/DynamicComponent'), {
-  ssr: false,
-})
+const DynamicComponent = dynamic(
+  () => import('../components/example/DynamicComponent'),
+  {
+    ssr: false,
+  },
+)
 
 function Examples() {
   const { address } = useAccount()

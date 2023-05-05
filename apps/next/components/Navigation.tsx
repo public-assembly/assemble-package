@@ -4,26 +4,25 @@ import { useRouter } from 'next/router'
 const pages = [
   {
     slug: '/',
-    title: 'Docs',
+    title: 'assemble package',
   },
-  {
-    slug: '/examples',
-    title: 'Examples',
-  },
+  // {
+  //   slug: "/examples",
+  //   title: "examples",
+  // },
 ]
 
 export function Navigation() {
   const router = useRouter()
 
   return (
-    <div className="flex flex-row gap-4">
+    <div className="flex gap-x-8">
       {pages.map((page) => (
         <Link passHref href={page.slug} key={page.slug}>
           <p
-            className="sm-font"
-            style={{
-              color: router.asPath === page.slug ? '#ff89de' : '#ff89de',
-            }}
+            className={`font-sans text-xl text-white ${
+              router.asPath === page.slug ? 'text-maximum-green-yellow ' : null
+            }`}
           >
             {page.title}
           </p>

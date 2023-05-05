@@ -3,24 +3,17 @@ import { ConnectKitProvider } from 'connectkit'
 import { SWRConfig } from 'swr'
 import { Header } from './Header'
 import { Footer } from './Footer'
-import { Layout } from './Layout'
 import { getDefaultClient } from 'connectkit'
 import { createClient, configureChains, WagmiConfig } from 'wagmi'
 import { mainnet } from 'wagmi/chains'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
-import { infuraProvider } from 'wagmi/providers/infura'
 import { publicProvider } from 'wagmi/providers/public'
 
 const alchemyKey = process.env.NEXT_PUBLIC_ALCHEMY_KEY
-const infuraKey = process.env.NEXT_PUBLIC_INFURA_KEY
 
 const { provider } = configureChains(
   [mainnet],
-  [
-    alchemyProvider({ apiKey: alchemyKey as string }),
-    infuraProvider({ apiKey: infuraKey as string }),
-    publicProvider(),
-  ],
+  [alchemyProvider({ apiKey: alchemyKey as string }), publicProvider()],
 )
 
 const client = createClient(
@@ -42,18 +35,16 @@ export function AppWrapper({ children }: { children: JSX.Element }) {
           }}
         >
           <NextNProgress
-            color="#ff89de"
+            color="#cdf15e"
             startPosition={0.125}
             stopDelayMs={200}
             height={2}
             showOnShallow={true}
             options={{ showSpinner: false }}
           />
-          <Layout>
-            <Header />
-            {children}
-            <Footer />
-          </Layout>
+          {/* <Header /> */}
+          {children}
+          <Footer />
         </SWRConfig>
       </ConnectKitProvider>
     </WagmiConfig>

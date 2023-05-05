@@ -2,10 +2,10 @@ import { links } from 'utils/links'
 
 export function Footer() {
   return (
-    <footer className="flex w-full flex-row items-center justify-between px-4 border-t-[1px] border-white gap-x-10 flex-wrap">
+    <footer className="flex w-full items-center justify-between p-8 border-t-[1px] border-white gap-x-10 flex-wrap bottom-0">
       {links.map((link) => (
         <a
-          className="text-underline"
+          className="font-sans text-6xl text-white hover:text-maximum-green-yellow"
           href={link.url}
           target="_blank"
           rel="noreferrer"
@@ -14,9 +14,6 @@ export function Footer() {
           <span>{link.platform}</span>
         </a>
       ))}
-      <div className="w-[60px] h-[60px] relative">
-        <img src="favicon.png" alt="favicon" />
-      </div>
     </footer>
   )
 }

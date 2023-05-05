@@ -14,11 +14,11 @@
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
-    "@next/mdx": "^13.3.1",
+    "@next/mdx": "^13.4.1",
     "autoprefixer": "^10.4.14",
     "connectkit": "^1.2.3",
     "ethers": "^5.7.1",
-    "next": "^13.3.1",
+    "next": "^13.4.1",
     "nextjs-progressbar": "^0.0.16",
     "postcss": "^8.4.23",
     "react": "^18.2.0",

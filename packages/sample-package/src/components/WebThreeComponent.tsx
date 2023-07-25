@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { useAccount } from 'wagmi'
+import { type Hex } from 'viem'
 import { useOwnedTokens } from '../hooks'
 
 type WebThreeComponentProps = {
   text?: string
-  address: `0x${string}`
+  address: Hex
 }
 
 export function WebThreeComponent(props: WebThreeComponentProps) {

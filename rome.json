@@ -2,14 +2,10 @@
   "files": {
     "ignore": [
       "**/.next", "**/node_modules", "cache", "coverage", "dist",
-      "generated.ts", "pnpm-lock.yaml", "pnpm-workspace.yaml", "tsconfig.json",
-      "tsconfig.*.json", "turbo.json"
+      "tsconfig.json", "tsconfig.*.json", "generated.ts", "pnpm-lock.yaml"
     ]
   },
   "$schema": "./node_modules/rome/configuration_schema.json",
-  "organizeImports": {
-    "enabled": false
-  },
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
@@ -17,13 +13,13 @@
     "indentSize": 2,
     "lineWidth": 80
   },
+  "organizeImports": {
+    "enabled": false
+  },
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
-      "suspicious": {
-        "noExplicitAny": "off"
-      }
+      "recommended": true
     }
   },
   "javascript": {

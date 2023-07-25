@@ -1,19 +1,15 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 
 const pages = [
   {
     slug: '/',
     title: 'assemble package',
   },
-  // {
-  //   slug: "/examples",
-  //   title: "examples",
-  // },
 ]
 
 export function Navigation() {
-  const router = useRouter()
+  const pathname = usePathname()
 
   return (
     <div className="flex gap-x-8">
@@ -21,7 +17,7 @@ export function Navigation() {
         <Link passHref href={page.slug} key={page.slug}>
           <p
             className={`font-sans text-xl text-white ${
-              router.asPath === page.slug ? 'text-maximum-green-yellow ' : null
+              pathname === page.slug ? 'text-maximum-green-yellow ' : null
             }`}
           >
             {page.title}

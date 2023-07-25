@@ -1,11 +1,11 @@
-import { utils } from 'ethers'
+import { getAddress, Hex } from 'viem'
 
-export function shortenAddress(address?: string, chars = 4): string {
+export function shortenAddress(address?: Hex, chars = 4): string {
   if (!address) {
     return ''
   }
 
-  const parsed = utils.getAddress(address)
+  const parsed = getAddress(address)
 
   if (!parsed) {
     console.error(`Invalid 'address' parameter '${address}'.`)
